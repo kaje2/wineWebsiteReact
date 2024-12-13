@@ -1,25 +1,26 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
-
-import Logo from '../assets/wine_logo.png';
 import { DropdownDivider, NavDropdown } from 'react-bootstrap';
-const description = "The best drinks in the town";
 
-export function Header( ){
+import Logo from '/workspaces/wineWebsiteReact/WineWebsite/src/assets/logo.png';
+import '/workspaces/wineWebsiteReact/WineWebsite/src/components/header.css'; // Importe o CSS personalizado
+
+const description = "";
+
+export function Header() {
     return (
-        <Navbar expand="md" bg="light" data-bs-theme="light" >
+        <Navbar expand="md" bg="light" className="navbar-light" data-bs-theme="light">
             <Container className="mx-2">
                 <Navbar.Brand href="/" className="fs-6 text-center">
                     <img
                         src={Logo}
-                        width="30"
-                        height="40"
+                        width="50px"
+                        alt="Logo"
                     />
-                    <p className="mb-0">{ description }</p>
-                    </Navbar.Brand>
+                    <p className="mb-0">{description}</p>
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="main-nav" />
                 <Navbar.Collapse id="main-nav">
                     <Nav>
@@ -27,7 +28,7 @@ export function Header( ){
                         <NavDropdown title="About Us">
                             <NavDropdown.Item as={Link} to="/about/aboutUs">About Us</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/about/contactUs">Contact Us</NavDropdown.Item>
-                            <DropdownDivider/>
+                            <DropdownDivider />
                             <NavDropdown.Item as={Link} to="/about/shipping">Shipping</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link as={Link} to="/Blog">Blog</Nav.Link>
@@ -35,5 +36,5 @@ export function Header( ){
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-    )
+    );
 }

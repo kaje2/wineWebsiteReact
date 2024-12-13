@@ -1,6 +1,6 @@
 
 export function ContactUs(){
     return(
-        <h1>Contact Us page baby!</h1>
+        <h1>Contact us</h1>
     )
 }

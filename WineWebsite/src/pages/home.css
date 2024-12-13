@@ -1,0 +1,68 @@
+/* home.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    color: goldenrod;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    color: goldenrod;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h5 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.product-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-col {
+    flex: 1 1 calc(25% - 20px); /* Ajusta a largura das colunas para 25% com espaço entre elas */
+    margin: 10px;
+    display: flex;
+}
