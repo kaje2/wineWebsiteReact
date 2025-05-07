@@ -2,8 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { useState, useEffect } from 'react';
-import { databases } from '/workspaces/wineWebsiteReact/WineWebsite/appwriteConfig'; // Importe o arquivo de configuração
-import './home.css'; // Importe o CSS personalizado
+import { databases } from '../../appwriteConfig.js';
+import './home.css';
 
 export function Home() {
     document.title = "Pellegrini";
@@ -13,8 +13,8 @@ export function Home() {
 
     const getData = async () => {
         const result = await databases.listDocuments(
-            '675c2ccf000a880ba0eb', // database id
-            '675c2cd6000844fa8983', // collection id
+            '675c2ccf000a880ba0eb',
+            '675c2cd6000844fa8983',
             []
         );
         console.log(result.documents);
